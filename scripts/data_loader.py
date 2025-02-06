@@ -1,9 +1,6 @@
 
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-from sklearn.preprocessing import LabelEncoder
+
 
 def load_data(docs):
     Credit_Card = pd.read_csv(f'{docs}/creditcard.csv')
