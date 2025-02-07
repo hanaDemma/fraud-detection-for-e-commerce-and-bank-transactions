@@ -41,8 +41,11 @@ def bivariate_analysis(numerical_columns_data):
     plt.show()
     
 def merge_fraud_ip_address_data(fraud_data,ip_address_country):
+     # Sort the data for merge_asof
     fraud_data = fraud_data.sort_values('ip_address')
     ip_address_country = ip_address_country.sort_values('lower_bound_ip_address')
+     # Perform an asof merge to find the closest lower bound
+    
     merged_fraud_data = pd.merge_asof(
         fraud_data, 
         ip_address_country, 
@@ -50,6 +53,7 @@ def merge_fraud_ip_address_data(fraud_data,ip_address_country):
         right_on='lower_bound_ip_address', 
         direction='backward'
     )
+       # Filter to ensure the IP is within the matched range
     merged_fraud_data = merged_fraud_data[
         (merged_fraud_data['ip_address'] >= merged_fraud_data['lower_bound_ip_address']) & 
         (merged_fraud_data['ip_address'] <= merged_fraud_data['upper_bound_ip_address'])
