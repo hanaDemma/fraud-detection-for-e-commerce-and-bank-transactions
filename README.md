@@ -31,12 +31,12 @@ FRAUD DETECTION FOR E-COMMERCE AND BANK TRANSACTIONS/
 └── requirements.txt
 
 ## Features
-**Data Analysis & Preprocessing**: Cleaning and transforming transaction data for fraud detection.
-**Feature Engineering**: Extracting meaningful insights such as transaction frequency, velocity, and time-based patterns.
-**Machine Learning Models**: Training and evaluating models like Logistic Regression, Random Forest, Neural Networks, and more.
-**Geolocation Analysis**: Mapping IP addresses to countries to detect fraud patterns.
-**Model Deployment**: Using Flask APIs & Docker for real-time fraud detection.
-**Dashboard Visualization**: Implementing Dash to visualize fraud trends and insights.
+- **Data Analysis & Preprocessing**: Cleaning and transforming transaction data for fraud detection.
+- **Feature Engineering**: Extracting meaningful insights such as transaction frequency, velocity, and time-based patterns.
+- **Machine Learning Models**: Training and evaluating models like Logistic Regression, Random Forest, Neural Networks, and more.
+- **Geolocation Analysis**: Mapping IP addresses to countries to detect fraud patterns.
+- **Model Deployment**: Using Flask APIs & Docker for real-time fraud detection.
+- **Dashboard Visualization**: Implementing Dash to visualize fraud trends and insights.
 
 
 ## Technologies
