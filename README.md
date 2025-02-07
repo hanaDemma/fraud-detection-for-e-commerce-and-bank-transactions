@@ -31,7 +31,6 @@ FRAUD DETECTION FOR E-COMMERCE AND BANK TRANSACTIONS/
 └── requirements.txt
 
 ## Features
-
 **Data Analysis & Preprocessing**: Cleaning and transforming transaction data for fraud detection.
 **Feature Engineering**: Extracting meaningful insights such as transaction frequency, velocity, and time-based patterns.
 **Machine Learning Models**: Training and evaluating models like Logistic Regression, Random Forest, Neural Networks, and more.
@@ -58,7 +57,7 @@ To set up the project on your local machine, follow these steps:
    ```bash
    git clone https://github.com/hanaDemma/fraud-detection-for-e-commerce-and-bank-transactions.git
 2. Navigate into the project directory:
-
+   ```bash
    cd fraud-detection-for-e-commerce-and-bank-transactions
 
 3. Install the required dependencies:
