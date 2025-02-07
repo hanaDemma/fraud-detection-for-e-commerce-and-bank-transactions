@@ -1,8 +1,34 @@
 # Fraud-detection-for-e-commerce-and-bank-transactions
 
-## Project Overview
+## Overview
 
-Fraud detection is essential for securing financial transactions in e-commerce and banking. This project aims to enhance fraud detection by leveraging machine learning techniques, geolocation analysis, and transaction pattern recognition to identify fraudulent transactions with high accuracy.
+Fraud detection is a critical component for securing financial transactions in both e-commerce and banking sectors. At Adey Innovations Inc.,  aims to improve fraud detection by leveraging advanced machine learning models, geolocation analysis, and transaction pattern recognition. The project focuses on handling the unique challenges of both e-commerce and bank credit transactions, enabling more accurate and efficient detection of fraudulent activities.
+
+
+## Folder Structure 
+
+FRAUD DETECTION FOR E-COMMERCE AND BANK TRANSACTIONS/
+├── .github/
+│
+├── .week8/
+│
+├── .notebooks/
+│   ├── Eda.ipynb
+│   └── README.md
+│
+├── .scripts/
+│   ├── data_cleaning.py
+│   ├── data_loader.py
+│
+├── .src/
+│
+├── .tests/
+│
+├── .gitignore
+│
+├── README.md
+│
+└── requirements.txt
 
 ## Features
 
@@ -31,5 +57,9 @@ To set up the project on your local machine, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/hanaDemma/fraud-detection-for-e-commerce-and-bank-transactions.git
+2. Navigate into the project directory:
 
-2. pip install -r requirements.txt
+   cd fraud-detection-for-e-commerce-and-bank-transactions
+
+3. Install the required dependencies:
+   pip install -r requirements.txt
