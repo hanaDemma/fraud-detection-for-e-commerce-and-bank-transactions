@@ -30,6 +30,7 @@ FRAUD DETECTION FOR E-COMMERCE AND BANK TRANSACTIONS/
 │
 └── requirements.txt
 
+
 ## Features
 - **Data Analysis & Preprocessing**: Cleaning and transforming transaction data for fraud detection.
 - **Feature Engineering**: Extracting meaningful insights such as transaction frequency, velocity, and time-based patterns.
@@ -61,4 +62,5 @@ To set up the project on your local machine, follow these steps:
    cd fraud-detection-for-e-commerce-and-bank-transactions
 
 3. Install the required dependencies:
+   ```bash
    pip install -r requirements.txt
