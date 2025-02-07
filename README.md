@@ -8,15 +8,19 @@ Fraud detection is essential for securing financial transactions in e-commerce a
 
 **Data Analysis & Preprocessing**: Cleaning and transforming transaction data for fraud detection.
 **Feature Engineering**: Extracting meaningful insights such as transaction frequency, velocity, and time-based patterns.
+**Machine Learning Models**: Training and evaluating models like Logistic Regression, Random Forest, Neural Networks, and more.
+**Geolocation Analysis**: Mapping IP addresses to countries to detect fraud patterns.
+**Model Deployment**: Using Flask APIs & Docker for real-time fraud detection.
+**Dashboard Visualization**: Implementing Dash to visualize fraud trends and insights.
 
 
 ## Technologies
 
-- Python 3.x
-- Pandas
-- NumPy
-- Scikit-learn
-- Jupyter Notebook
+- Programming Language: Python 3.x
+- Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+- Machine Learning: Logistic Regression, Random Forest, Gradient Boosting
+- Deployment: Flask, Docker
+- Visualization: Dash, Plotly
 
 
 ## Installation
