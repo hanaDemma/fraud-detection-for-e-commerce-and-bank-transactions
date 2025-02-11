@@ -34,10 +34,12 @@ FRAUD DETECTION FOR E-COMMERCE AND BANK TRANSACTIONS/
 ## Features
 - **Data Analysis & Preprocessing**: Cleaning and transforming transaction data for fraud detection.
 - **Feature Engineering**: Extracting meaningful insights such as transaction frequency, velocity, and time-based patterns.
-- **Machine Learning Models**: Training and evaluating models like Logistic Regression, Random Forest, Neural Networks, and more.
 - **Geolocation Analysis**: Mapping IP addresses to countries to detect fraud patterns.
+- **Machine Learning Models**: Training and evaluating models like Logistic Regression, Random Forest, Neural Networks, and more.
+- **Model Explainability**:Implement mlops to understand and interpret the decisions made by machine learning models
 - **Model Deployment**: Using Flask APIs & Docker for real-time fraud detection.
 - **Dashboard Visualization**: Implementing Dash to visualize fraud trends and insights.
+
 
 
 ## Technologies
@@ -64,3 +66,17 @@ To set up the project on your local machine, follow these steps:
 3. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+
+
+## Contributing
+
+We welcome contributions to enhance the fraud detection system. Please follow these steps to contribute:
+
+   - Fork the repository: Create a personal copy of the repository on GitHub.
+   - Create a new branch: Develop your feature or fix in a separate branch.
+   - Commit your changes: Ensure your commits are clear and descriptive.
+   - Push to your fork: Upload your changes to your GitHub repository.
+   - Create a Pull Request: Submit a PR to the main repository for review.
+   License
+
+- For more information and detailed documentation, please refer to the README.md file.
