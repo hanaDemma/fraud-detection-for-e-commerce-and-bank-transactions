@@ -1,12 +1,15 @@
-from flask import Flask, request, jsonify
-import joblib
+from flask import Flask, request, jsonify, send_from_directory, render_template
+from flask_cors import CORS
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
+import joblib
 import logging
 from logging.handlers import RotatingFileHandler
-
+import os
+from waitress import serve
+# from serve_model import app  # Import your Flask app
 app = Flask(__name__)
+CORS(app)  # Allow all origins
 
 # Configure logging
 handler = RotatingFileHandler('logs/api.log', maxBytes=10000, backupCount=3)
@@ -17,60 +20,67 @@ app.logger.setLevel(logging.INFO)
 
 # Load models
 try:
-    creditcard_model = joblib.load('models/logistic_regression.pkl')
-    frauddata_model = load_model('models/random_forest.pkl')
+    bank_model = joblib.load('models/random_forest.pkl')
+    ecommerce_model = joblib.load('models/random_forest.pkl')
     app.logger.info("Successfully loaded all models")
 except Exception as e:
     app.logger.error(f"Error loading models: {str(e)}")
     raise e
 
+@app.route('/')
+def home():
+    """Home route."""
+    return render_template('index.html')  
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(
+        os.path.join(app.root_path, 'static'),
+        'favicon.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )
+
 @app.route('/health', methods=['GET'])
 def health_check():
-    """Endpoint for health checks"""
+    """Endpoint for health checks."""
     app.logger.info("Health check requested")
     return jsonify({"status": "healthy"}), 200
 
-@app.route('/predict/creditcard', methods=['POST'])
-def predict_creditcard():
-    """Endpoint for credit card fraud predictions"""
+@app.route('/bank_predict', methods=['POST'])
+def bank_predict():
+    """Endpoint for credit card fraud predictions."""
     try:
         app.logger.info("Credit card prediction request received")
-        data = request.get_json()
-        features = np.array(data['features']).reshape(1, -1)
-        
+        data = request.json
+       
+         # Convert JSON to DataFrame
+        df = pd.DataFrame([data])
         # Preprocessing (add your specific steps)
         # ...
+        # Make predictions
         
-        prediction = creditcard_model.predict_proba(features)[0][1]
-        result = {"fraud_probability": float(prediction)}
-        
-        app.logger.info(f"Prediction successful: {result}")
-        return jsonify(result), 200
-    
+        prediction = bank_model.predict(df)
+        # app.logger.info(f"Prediction successful: {result}")
+        return jsonify({'prediction': int(prediction[0])})
+ 
     except Exception as e:
         app.logger.error(f"Prediction error: {str(e)}")
         return jsonify({"error": str(e)}), 400
 
-@app.route('/predict/frauddata', methods=['POST'])
-def predict_frauddata():
-    """Endpoint for general fraud predictions"""
+@app.route('/ecommerce_predict', methods=['POST'])
+def ecommerce_predict():
     try:
-        app.logger.info("Fraudata prediction request received")
-        data = request.get_json()
-        features = np.array(data['features']).reshape(1, -1)
+        # Get JSON data from the request
+        data = request.json
         
-        # Preprocessing for NN model
-        features = (features - np.array([0.1, 0.5, ...])) / np.array([0.3, 0.8, ...])  # Example normalization
+        # Convert JSON to DataFrame
+        df = pd.DataFrame([data])
         
-        prediction = frauddata_model.predict(features)[0][0]
-        result = {"fraud_probability": float(prediction)}
+        # Make predictions
+        prediction = ecommerce_model.predict(df)
         
-        app.logger.info(f"NN prediction successful: {result}")
-        return jsonify(result), 200
-    
+        return jsonify({'prediction': int(prediction[0])})
     except Exception as e:
-        app.logger.error(f"NN prediction error: {str(e)}")
-        return jsonify({"error": str(e)}), 400
+        return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8000)

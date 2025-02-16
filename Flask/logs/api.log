@@ -1,0 +1,50 @@
+2025-02-16 16:45:12,531 - serve_model - ERROR - Error loading models: File format not supported: filepath=models/random_forest.pkl. Keras 3 only supports V3 `.keras` files and legacy H5 format files (`.h5` extension). Note that the legacy SavedModel format is not supported by `load_model()` in Keras 3. In order to reload a TensorFlow SavedModel as an inference-only layer in Keras 3, use `keras.layers.TFSMLayer(models/random_forest.pkl, call_endpoint='serving_default')` (note that your `call_endpoint` might have a different name).
+2025-02-16 16:47:52,690 - serve_model - INFO - Successfully loaded all models
+2025-02-16 16:55:40,373 - serve_model - INFO - Successfully loaded all models
+2025-02-16 17:11:27,983 - serve_model - INFO - Successfully loaded all models
+2025-02-16 17:11:29,078 - serve_model - INFO - Successfully loaded all models
+2025-02-16 17:14:18,704 - serve_model - INFO - Successfully loaded all models
+2025-02-16 17:19:40,063 - serve_model - INFO - Successfully loaded all models
+2025-02-16 17:19:41,412 - serve_model - INFO - Successfully loaded all models
+2025-02-16 17:22:18,496 - serve_model - INFO - Successfully loaded all models
+2025-02-16 17:22:19,802 - serve_model - INFO - Successfully loaded all models
+2025-02-16 20:41:45,885 - serve_model - INFO - Successfully loaded all models
+2025-02-16 20:41:50,463 - serve_model - INFO - Successfully loaded all models
+2025-02-16 20:49:07,549 - serve_model - INFO - Successfully loaded all models
+2025-02-16 20:49:10,826 - serve_model - INFO - Successfully loaded all models
+2025-02-16 20:55:07,007 - serve_model - INFO - Successfully loaded all models
+2025-02-16 20:55:23,364 - serve_model - INFO - Successfully loaded all models
+2025-02-16 20:55:48,090 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:03:20,900 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:03:23,398 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:03:37,536 - serve_model - INFO - Credit card prediction request received
+2025-02-16 21:03:37,537 - serve_model - ERROR - Prediction error: name 'pd' is not defined
+2025-02-16 21:03:58,063 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:04:06,082 - serve_model - INFO - Credit card prediction request received
+2025-02-16 21:04:06,181 - serve_model - ERROR - Prediction error: X has 30 features, but LogisticRegression is expecting 31 features as input.
+2025-02-16 21:04:40,135 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:04:44,723 - serve_model - INFO - Credit card prediction request received
+2025-02-16 21:04:44,726 - serve_model - ERROR - Prediction error: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
+2025-02-16 21:06:34,131 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:13:02,473 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:13:05,082 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:13:12,376 - serve_model - INFO - Credit card prediction request received
+2025-02-16 21:13:12,385 - serve_model - ERROR - Prediction error: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
+2025-02-16 21:14:47,593 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:14:50,471 - serve_model - INFO - Successfully loaded all models
+2025-02-16 21:16:37,603 - serve_model - INFO - Credit card prediction request received
+2025-02-16 21:16:37,613 - serve_model - ERROR - Prediction error: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
+2025-02-16 21:25:25,074 - serve_model - INFO - Credit card prediction request received
+2025-02-16 21:25:25,078 - serve_model - ERROR - Prediction error: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Unnamed: 0
+
