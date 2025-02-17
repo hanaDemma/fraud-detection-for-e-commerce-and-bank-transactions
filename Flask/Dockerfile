@@ -1,5 +1,5 @@
 # Use official Python image
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip install waitress
 
 # Copy requirements
 COPY requirements.txt .
@@ -28,7 +30,10 @@ COPY . .
 RUN mkdir -p /app/logs
 
 # Expose the Flask port
-EXPOSE 5000
+EXPOSE 8000
 
-# Start the application
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "3", "serve_model:app"]
+# # Start the application
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "serve_model:app"]
+
+# Run serve_model.py when the container launches
+# CMD ["python", "serve_model.py"]
