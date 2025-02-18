@@ -80,7 +80,7 @@ The goal of this task is to deploy the trained fraud detection model and develop
 1. Create the Flask Application
     - **Create a new project directory:**
     ```bash
-    mkdir fraud_detection_api && cd flask.
+    mkdir flask && cd flask.
 - **Create a Python script serve_model.py to serve the model using Flask**
 - **Create a requirements.txt file to list dependencies.**
 
