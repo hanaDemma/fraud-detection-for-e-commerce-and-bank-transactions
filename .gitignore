@@ -3,3 +3,5 @@ docs/
 mlruns/
 mlartifacts/
 model/
+*.csv/
+Fraud_Data.csv
