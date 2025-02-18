@@ -70,3 +70,103 @@ Understanding how a model makes decisions is crucial, especially in sensitive ar
 - Create a feature/task-3 Branch for development.
 - Commit progress regularly with clear and detailed commit messages.
 - Merge updates into the main branch via a Pull Request (PR).
+
+
+# Task-4 Model Deployment and API Development
+## Overview
+The goal of this task is to deploy the trained fraud detection model and develop an API for seamless integration with external systems.
+
+## Steps:
+1. Create the Flask Application
+    - **Create a new project directory:**
+    ```bash
+    mkdir fraud_detection_api && cd flask.
+- **Create a Python script serve_model.py to serve the model using Flask**
+- **Create a requirements.txt file to list dependencies.**
+
+2. API Development
+- **Install Dependencies**
+   - Create a requirements.txt file with the necessary dependencies:
+      ```bash
+      pip install -r requirements.txt
+
+- **Define API Endpoints**
+   - Create `serve_model
+        - Load the trained fraud detection model.
+        - Define API endpoints for inference and health checks.
+        - Log requests and responses for monitoring.
+
+3. Test the API
+- **Run the Flask App Locally**
+
+4. Dockerizing the Flask Application
+
+- **Create a Dockerfile in the same directory** 
+  ```bash
+
+# Use an official Python runtime as a parent image
+FROM python:3.11-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install -r requirements.txt
+
+# Expose port 5000 to allow external access
+EXPOSE 5000
+
+# Run the API using Gunicorn for production
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "serve_model:app"]
+
+5. Build and Run the Docker Container
+- **Build the Docker Image**
+  ```bash
+  docker build -t fraud-detection-model .
+
+# Development Instructions
+- Create a feature/task-4 Branch for development.
+- Commit progress regularly with clear and detailed commit messages.
+- Merge updates into the main branch via a Pull Request (PR).
+
+# Task-5 Build a Dashboard with Flask and Dash
+## Overview
+Create an interactive dashboard using Dash for visualizing fraud Insights from your data. The Flask backend will serve data from the datasets, while Dash will be used to visualize insights.
+
+## steps
+1. Setting Up the Project
+- **Create a new directory for the dashboard:**
+    ```bash
+    mkdir fraud_detection && cd fraud_detection_dashboard.
+- **Install Required Libraries**
+- Create a requirements.txt file and add the following dependencies:
+    ```bash
+    pip install -r requirements.txt
+
+2. Dash Frontend - Interactive Dashboard
+- Create app.py to visualize fraud insights.
+
+3.Running the Dashboard
+1. **Start the Flask API:**
+
+        ```bash
+        python app.py
+
+2. **Start the Dash dashboard:**
+         ```bash
+         python dashboard.py
+
+3. **Open the dashboard in your browser:**
+
+             ```bash
+        http://127.0.0.1:8050/
+             
+# Development Instructions
+- Create a feature/task-5 Branch for development.
+- Commit progress regularly with clear and detailed commit messages.
+- Merge updates into the main branch via a Pull Request (PR).
+
+
