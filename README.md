@@ -8,6 +8,7 @@ Fraud detection is a critical component for securing financial transactions in b
 ## Folder Structure 
 
 FRAUD DETECTION FOR E-COMMERCE AND BANK TRANSACTIONS/
+
 ├── .github/
 
 ├── .week8/
