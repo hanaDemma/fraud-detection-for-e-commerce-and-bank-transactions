@@ -9,25 +9,47 @@ Fraud detection is a critical component for securing financial transactions in b
 
 FRAUD DETECTION FOR E-COMMERCE AND BANK TRANSACTIONS/
 ├── .github/
-│
+
 ├── .week8/
-│
+
+├── flask/
+
+│   ├── logs
+
+│   └── models
+
+│   └── templates
+
+│   └── Dockerfile
+
+│   └── serve_model.py
+
+│   └── requirements.txt
+
+├── fraud_detection_dashboard/
+
+│   ├── app.py
+
 ├── .notebooks/
+
 │   ├── Eda.ipynb
+
 │   └── README.md
-│
+
 ├── .scripts/
+
 │   ├── data_cleaning.py
+
 │   ├── data_loader.py
-│
+
 ├── .src/
-│
+
 ├── .tests/
-│
+
 ├── .gitignore
-│
+
 ├── README.md
-│
+
 └── requirements.txt
 
 
