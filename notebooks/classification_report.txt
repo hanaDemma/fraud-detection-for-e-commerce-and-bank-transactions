@@ -1,0 +1,17 @@
+Model	            Performance Metrics
+
+	                  Precision	Recall	    F1	       Accuracy	    Roc_auc
+
+Logistic Regression	    0.0446	0.9286	    0.0851	    0.9656	    0.9471
+
+CNN	                    0.0181	0.9694	    0.0355	    0.9095	    0.9847
+
+LSTM	                0.1790	0.8878	    0.2979	    0.9928	    0.9838
+
+RNN	                    0.0789	0.9184	    0.1453	    0.9814	    0.9818
+
+MLP	                    0.0611	0.8878	    0.1143	    0.9763	    0.9772
+
+Gradient Boosting	    0.7375	0.6020	    0.6629	    0.9989	    0.8008
+
+Random forest	        0.9620	0.7755	    0.8588	    0.9996	    0.8877
